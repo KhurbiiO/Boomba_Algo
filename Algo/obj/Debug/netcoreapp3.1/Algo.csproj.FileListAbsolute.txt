@@ -12,3 +12,31 @@ C:\Users\shall\source\repos\Algo\Algo\obj\Debug\netcoreapp3.1\Algo.csproj.CoreCo
 C:\Users\shall\source\repos\Algo\Algo\obj\Debug\netcoreapp3.1\Algo.dll
 C:\Users\shall\source\repos\Algo\Algo\obj\Debug\netcoreapp3.1\Algo.pdb
 C:\Users\shall\source\repos\Algo\Algo\obj\Debug\netcoreapp3.1\Algo.genruntimeconfig.cache
+C:\Users\longt\OneDrive - Office 365 Fontys\1\Semester_1\Proftaak Part 1\Algo\Algo\obj\Debug\netcoreapp3.1\Algo.csproj.AssemblyReference.cache
+C:\Users\longt\OneDrive - Office 365 Fontys\1\Semester_1\Proftaak Part 1\Algo\Algo\obj\Debug\netcoreapp3.1\Algo.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\longt\OneDrive - Office 365 Fontys\1\Semester_1\Proftaak Part 1\Algo\Algo\obj\Debug\netcoreapp3.1\Algo.AssemblyInfoInputs.cache
+C:\Users\longt\OneDrive - Office 365 Fontys\1\Semester_1\Proftaak Part 1\Algo\Algo\obj\Debug\netcoreapp3.1\Algo.AssemblyInfo.cs
+C:\Users\longt\OneDrive - Office 365 Fontys\1\Semester_1\Proftaak Part 1\Algo\Algo\obj\Debug\netcoreapp3.1\Algo.csproj.CoreCompileInputs.cache
+C:\Users\longt\OneDrive - Office 365 Fontys\1\Semester_1\Proftaak Part 1\Algo\Algo\obj\Debug\netcoreapp3.1\Algo.dll
+C:\Users\longt\OneDrive - Office 365 Fontys\1\Semester_1\Proftaak Part 1\Algo\Algo\obj\Debug\netcoreapp3.1\Algo.pdb
+C:\Users\longt\OneDrive - Office 365 Fontys\1\Semester_1\Proftaak Part 1\Algo\Algo\bin\Debug\netcoreapp3.1\Algo.exe
+C:\Users\longt\OneDrive - Office 365 Fontys\1\Semester_1\Proftaak Part 1\Algo\Algo\bin\Debug\netcoreapp3.1\Algo.deps.json
+C:\Users\longt\OneDrive - Office 365 Fontys\1\Semester_1\Proftaak Part 1\Algo\Algo\bin\Debug\netcoreapp3.1\Algo.runtimeconfig.json
+C:\Users\longt\OneDrive - Office 365 Fontys\1\Semester_1\Proftaak Part 1\Algo\Algo\bin\Debug\netcoreapp3.1\Algo.runtimeconfig.dev.json
+C:\Users\longt\OneDrive - Office 365 Fontys\1\Semester_1\Proftaak Part 1\Algo\Algo\bin\Debug\netcoreapp3.1\Algo.dll
+C:\Users\longt\OneDrive - Office 365 Fontys\1\Semester_1\Proftaak Part 1\Algo\Algo\bin\Debug\netcoreapp3.1\Algo.pdb
+C:\Users\longt\OneDrive - Office 365 Fontys\1\Semester_1\Proftaak Part 1\Algo\Algo\obj\Debug\netcoreapp3.1\Algo.genruntimeconfig.cache
+C:\Users\Long\OneDrive - Office 365 Fontys\1\Semester_1\Proftaak Part 1\Algo\Algo\bin\Debug\netcoreapp3.1\Algo.exe
+C:\Users\Long\OneDrive - Office 365 Fontys\1\Semester_1\Proftaak Part 1\Algo\Algo\bin\Debug\netcoreapp3.1\Algo.deps.json
+C:\Users\Long\OneDrive - Office 365 Fontys\1\Semester_1\Proftaak Part 1\Algo\Algo\bin\Debug\netcoreapp3.1\Algo.runtimeconfig.json
+C:\Users\Long\OneDrive - Office 365 Fontys\1\Semester_1\Proftaak Part 1\Algo\Algo\bin\Debug\netcoreapp3.1\Algo.runtimeconfig.dev.json
+C:\Users\Long\OneDrive - Office 365 Fontys\1\Semester_1\Proftaak Part 1\Algo\Algo\bin\Debug\netcoreapp3.1\Algo.dll
+C:\Users\Long\OneDrive - Office 365 Fontys\1\Semester_1\Proftaak Part 1\Algo\Algo\bin\Debug\netcoreapp3.1\Algo.pdb
+C:\Users\Long\OneDrive - Office 365 Fontys\1\Semester_1\Proftaak Part 1\Algo\Algo\obj\Debug\netcoreapp3.1\Algo.csproj.AssemblyReference.cache
+C:\Users\Long\OneDrive - Office 365 Fontys\1\Semester_1\Proftaak Part 1\Algo\Algo\obj\Debug\netcoreapp3.1\Algo.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Long\OneDrive - Office 365 Fontys\1\Semester_1\Proftaak Part 1\Algo\Algo\obj\Debug\netcoreapp3.1\Algo.AssemblyInfoInputs.cache
+C:\Users\Long\OneDrive - Office 365 Fontys\1\Semester_1\Proftaak Part 1\Algo\Algo\obj\Debug\netcoreapp3.1\Algo.AssemblyInfo.cs
+C:\Users\Long\OneDrive - Office 365 Fontys\1\Semester_1\Proftaak Part 1\Algo\Algo\obj\Debug\netcoreapp3.1\Algo.csproj.CoreCompileInputs.cache
+C:\Users\Long\OneDrive - Office 365 Fontys\1\Semester_1\Proftaak Part 1\Algo\Algo\obj\Debug\netcoreapp3.1\Algo.dll
+C:\Users\Long\OneDrive - Office 365 Fontys\1\Semester_1\Proftaak Part 1\Algo\Algo\obj\Debug\netcoreapp3.1\Algo.pdb
+C:\Users\Long\OneDrive - Office 365 Fontys\1\Semester_1\Proftaak Part 1\Algo\Algo\obj\Debug\netcoreapp3.1\Algo.genruntimeconfig.cache

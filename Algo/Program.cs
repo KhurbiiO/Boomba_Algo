@@ -1,6 +1,4 @@
-﻿
-
-using System;
+﻿using System;
 
 namespace Algo
 {
@@ -8,104 +6,112 @@ namespace Algo
     {
         static void Main(string[] args)
         {
-            int Xpos = 4; 
-            int Ypos = 0;
-            int PreMoveX;
+            /*
+             * ! = landmijn/perimeter
+             * ? = onbekend pad
+             * 1 = bekend pad
+             * 0 = doodlopende pad
+             */
 
-            if(Xpos == 4)
-            {
-                PreMoveX = 0;
-            }
-            else
-            {
-                PreMoveX = 1;
-            }
+            // Start positie
+            int row = 1;
+            int column = 1;
 
-            String[,] Box = new String[,] {
-                {"O", "O", "O", "O", "O" },
-                {"X", "X", "O", "X", "X" },
-                {"O", "O", "O", "O", "O" },
-                {"X", "X", "X", "O", "X" },
-                {"X", "X", "X", "O", "X" },
+            // Fake map met landmijmen en een perimeter omheen
+            char[,] fakeMap = new char[,] {
+                {'!', '!', '!', '!', '!', '!', '!', '!', '!', '!', '!', },
+                {'!', '?', '?', '?', '!', '!', '?', '?', '?', '?', '!', },
+                {'!', '!', '!', '?', '!', '!', '!', '!', '!', '?', '!', },
+                {'!', '!', '!', '?', '!', '!', '!', '?', '?', '?', '!', },
+                {'!', '?', '?', '?', '?', '?', '!', '!', '?', '!', '!', },
+                {'!', '?', '!', '!', '!', '?', '!', '!', '?', '!', '!', },
+                {'!', '?', '!', '!', '!', '?', '?', '!', '?', '!', '!', },
+                {'!', '?', '!', '!', '!', '?', '!', '!', '?', '?', '!', },
+                {'!', '?', '!', '!', '?', '?', '!', '!', '!', '?', '!', },
+                {'!', '?', '!', '!', '?', '!', '!', '?', '?', '?', '!', },
+                {'!', '?', '!', '?', '?', '?', '!', '?', '!', '!', '!', },
+                {'!', '?', '!', '!', '!', '?', '!', '?', '!', '!', '!', },
+                {'!', '?', '!', '!', '!', '?', '?', '?', '!', '!', '!', },
+                {'!', '?', '!', '!', '!', '!', '!', '!', '!', '!', '!', },
+                {'!', '!', '!', '!', '!', '!', '!', '!', '!', '!', '!', },
             };
 
-            int pathCreation()
+            // Klaar wanneer je de overkant hebt bereikt
+            // Verander 2 naar 1 wanneer je de Boomba ook terug naar het start positie gaat
+            while (column != fakeMap.GetLength(0) - 2)
             {
-                //forward
-                if (Box[Ypos + 1 , Xpos] == "O")
-                {
-                    Ypos++;
-                    return 2;
-                }
+                pathCreation();
+                EntryPosition();
+            }
 
-                //right
-                if (PreMoveX != 1)
+            // Maak een pad
+            void pathCreation()
+            {
+                fakeMap[column, row] = '1';
+                if (fakeMap[column + 1, row] == '?')
                 {
-                    if (Xpos != 0)
+                     column++;
+                }
+                else if (fakeMap[column - 1, row] == '?')
+                {
+                     column--;
+                }
+                else if (fakeMap[column, row + 1] == '?')
+                {
+                     row++;
+                }
+                else if (fakeMap[column, row - 1] == '?')
+                {
+                     row--;
+                }
+                else if (
+                    (fakeMap[column + 1, row] == '!' && fakeMap[column, row - 1] == '!' && fakeMap[column, row + 1] == '!') ||
+                    (fakeMap[column, row - 1] == '!' && fakeMap[column - 1, row] == '!' && fakeMap[column + 1, row] == '!') ||
+                    (fakeMap[column - 1, row] == '!' && fakeMap[column, row - 1] == '!' && fakeMap[column, row + 1] == '!') ||
+                    (fakeMap[column, row + 1] == '!' && fakeMap[column - 1, row] == '!' && fakeMap[column + 1, row] == '!'))
+                {
+                    pathTraceback();
+                }
+            }
+
+            // Bij een doodlopende pad terug naar het eerst volgende '?'
+            void pathTraceback()
+            {
+                while (fakeMap[column + 1, row] != '?' && fakeMap[column, row + 1] != '?' && fakeMap[column - 1, row] != '?' && fakeMap[column, row - 1] != '?')
+                {
+                    fakeMap[column, row] = '0';
+
+                    if (fakeMap[column - 1, row] == '1')
                     {
-                        if (Box[Ypos, Xpos - 1] == "O")
-                        {
-                            Xpos--;
-                            PreMoveX = 0;
-                            return 1;
-                        }
+                        column--;
+                        EntryPosition();
+
                     }
-                }                
-                
-                //left
-                if(PreMoveX != 0)
-                {
-                    if (Xpos != 4)
+                    else if (fakeMap[column, row - 1] == '1')
                     {
-                        if (Box[Ypos, Xpos + 1] == "O")
-                        {
-                            Xpos++;
-                            PreMoveX = 1;
-                            return 3;
-                        }
+                        row--;
+                        EntryPosition();
+
+                    }
+                    else if (fakeMap[column + 1, row] == '1')
+                    {
+                        column++;
+                        EntryPosition();
+
+                    }
+                    else if (fakeMap[column, row + 1] == '1')
+                    {
+                        row++;
+                        EntryPosition();
                     }
                 }
-                 
-                return 0;                
             }
 
-            if(Box[Ypos, Xpos] == "O")
+            // Positie bij elke stap
+            void EntryPosition()
             {
-                Console.WriteLine("Entry at position (" + Ypos + ", " + Xpos + ")");
-                while (Ypos != 4)
-                {
-                    int Movement = pathCreation();
-                    switch (Movement)
-                    {
-                        case 2:
-                            Console.WriteLine("Moved forward, position (" + Ypos + ", " + Xpos + ")");
-                            break; 
-
-                        case 1:
-                            Console.WriteLine("Moved to the left, position (" + Ypos + ", " + Xpos + ")");
-                            break;
-
-                        case 3:
-                            Console.WriteLine("Moved to the right, position (" + Ypos + ", " + Xpos + ")");
-                            break;
-
-                        case 0:
-                            Console.WriteLine("Dead-End");
-                            Movement = 5;
-                            break;
-                    }                      
-
-                }
-
-
+                Console.WriteLine(fakeMap[column, row] + " Entry at position (" + column + ", " + row + ")");
             }
-
-            else
-            {
-                Console.WriteLine("Invalid entry detected");
-            }
-
-
         }
     }
 }

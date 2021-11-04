@@ -37,7 +37,8 @@ namespace Algo
             };
 
             // Klaar wanneer je de overkant hebt bereikt
-            while (column != fakeMap.GetLength(0) - 1)
+            // Verander 2 naar 1 wanneer je de Boomba ook terug naar het start positie gaat
+            while (column != fakeMap.GetLength(0) - 2)
             {
                 pathCreation();
                 EntryPosition();
@@ -63,9 +64,8 @@ namespace Algo
                 {
                      row--;
                 }
-
-                // Bij een doodlopende pad terug naar het eerst volgende '?'
-                if ((fakeMap[column + 1, row] == '!' && fakeMap[column, row - 1] == '!' && fakeMap[column, row + 1] == '!') ||
+                else if (
+                    (fakeMap[column + 1, row] == '!' && fakeMap[column, row - 1] == '!' && fakeMap[column, row + 1] == '!') ||
                     (fakeMap[column, row - 1] == '!' && fakeMap[column - 1, row] == '!' && fakeMap[column + 1, row] == '!') ||
                     (fakeMap[column - 1, row] == '!' && fakeMap[column, row - 1] == '!' && fakeMap[column, row + 1] == '!') ||
                     (fakeMap[column, row + 1] == '!' && fakeMap[column - 1, row] == '!' && fakeMap[column + 1, row] == '!'))
@@ -74,6 +74,7 @@ namespace Algo
                 }
             }
 
+            // Bij een doodlopende pad terug naar het eerst volgende '?'
             void pathTraceback()
             {
                 while (fakeMap[column + 1, row] != '?' && fakeMap[column, row + 1] != '?' && fakeMap[column - 1, row] != '?' && fakeMap[column, row - 1] != '?')
@@ -106,6 +107,7 @@ namespace Algo
                 }
             }
 
+            // Positie bij elke stap
             void EntryPosition()
             {
                 Console.WriteLine(fakeMap[column, row] + " Entry at position (" + column + ", " + row + ")");
